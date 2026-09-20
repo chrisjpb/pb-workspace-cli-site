@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PB Workspace CLI</title>
+<meta name="description" content="PB Workspace CLI is a private, single-user command line client for the owner's own Google Calendar, Gmail, Drive, Docs, Sheets, and Contacts.">
+<style>
+  :root { --bg:#0f1115; --fg:#e7e9ee; --muted:#9aa3b2; --line:#252a34; --accent:#7aa2f7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 22px 72px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:22px; margin-bottom:34px; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 8px; }
+  h2 { font-size:1.12rem; margin:34px 0 8px; }
+  p, li { color:#cfd4de; }
+  .muted { color:var(--muted); }
+  .tag { display:inline-block; font-size:.78rem; letter-spacing:.04em; text-transform:uppercase;
+         color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:3px 11px; }
+  code { background:#171b22; border:1px solid var(--line); border-radius:5px; padding:2px 6px; font-size:.9em; }
+  a { color:var(--accent); }
+  footer { border-top:1px solid var(--line); margin-top:46px; padding-top:20px; font-size:.9rem; }
+  footer a { margin-right:18px; }
+  ul { padding-left:22px; }
+  @media (max-width:520px){ .wrap{padding:26px 16px 56px;} h1{font-size:1.55rem;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">Personal tool</span>
+    <h1>PB Workspace CLI</h1>
+    <p class="muted">A private, single-user command line client for Google Workspace data.</p>
+  </header>
+
+  <h2>What this application is</h2>
+  <p>
+    PB Workspace CLI is a command line program that runs locally on its owner's own computer. It is not
+    a public service, not a website, and has exactly one user: its owner, who is also its developer.
+    It exists so the owner can read and manage <em>their own</em> Google account data from a terminal,
+    including automation scripts they run themselves.
+  </p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Reads and creates calendar events on the owner's own calendars.</li>
+    <li>Searches and reads the owner's own Gmail messages, and sends mail from their own address.</li>
+    <li>Lists, downloads, and uploads files in the owner's own Google Drive.</li>
+    <li>Reads and edits the owner's own Google Docs and Sheets.</li>
+    <li>Reads the owner's own Google Contacts.</li>
+  </ul>
+  <p>
+    All of this happens on the owner's local machine, against the owner's own account. There is no
+    server component, no multi-user access, and no data belonging to anyone else is ever reachable
+    by this application.
+  </p>
+
+  <h2>How it accesses Google data</h2>
+  <p>
+    It connects to Google APIs using OAuth 2.0 installed-application credentials that the owner
+    created in their own Google Cloud project. The owner grants access to their own account through
+    Google's consent screen, and may revoke that access at any time from
+    <a href="https://myaccount.google.com/permissions">their Google Account permissions page</a>.
+    The application requests only the scopes needed for the features listed above.
+  </p>
+
+  <h2>Data handling</h2>
+  <p>
+    Credentials and OAuth tokens are stored only on the owner's own computer. No Google user data is
+    transmitted to, stored on, or shared with any third party, and none of it is used for advertising,
+    profiling, or model training. See the <a href="privacy.html">Privacy Policy</a> for detail.
+  </p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <p class="muted">Contact: <a href="mailto:chrisjpb04@gmail.com">chrisjpb04@gmail.com</a></p>
+  </footer>
+</div>
+</body>
+</html>
